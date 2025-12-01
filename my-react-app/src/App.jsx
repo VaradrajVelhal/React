@@ -1,9 +1,10 @@
-import StopWatch from "./StopWatch";
+import ToDoList from "./ToDoList";
+import "./toDoList.css";
 
 function App() {
   return (
     <>
-      <StopWatch></StopWatch>
+      <ToDoList></ToDoList>
     </>
   );
 }

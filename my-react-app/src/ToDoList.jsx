@@ -7,12 +7,13 @@ function ToDoList(params) {
   ]);
   const [newTask, setNewTask] = useState("");
 
-  function handleInputChange(event) {
-    setNewTask(event.target.value);
-  }
+  // function handleInputChange(event) {
+  //   console.log(event.target.value);
+  //   setNewTask(event.target.value);
+  // }
   function addTask() {
     if (newTask.trim() !== "") {
-      setTasks((t) => [...t, newTask]);
+      setTasks((prev) => [...prev, newTask]);
       setNewTask("");
     }
   }
@@ -48,7 +49,7 @@ function ToDoList(params) {
           type="text"
           placeholder="Enter a task...."
           value={newTask}
-          onChange={handleInputChange}
+          onChange={(event) => setNewTask(event.target.value)}
         />
         <button className="add-button" onClick={addTask}>
           Add
